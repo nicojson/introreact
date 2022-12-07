@@ -1,0 +1,18 @@
+.list-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	width: 100%;
+	max-height: 395px;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	list-style: none;
+	overflow: auto;
+}
+
+@media screen and (max-width: 280px) {
+	.list-wrapper {
+		max-height: 400px;
+	}
+}

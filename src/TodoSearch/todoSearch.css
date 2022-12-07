@@ -1,0 +1,62 @@
+@import url('../vars.css');
+
+.search-bar-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: auto;
+	position: relative;
+}
+
+.wrapper-search-bar {
+	width: auto;
+	height: auto;
+	position: relative;
+}
+
+.search-bar {
+  	max-width: 600px;
+	height: 32px;
+	padding: 4px 32px 4px 14px;
+	font-size: 1.8rem;
+	border: none;
+	border-radius: 24px;
+	background-color: var(--gray); 
+}
+
+.search-bar:focus-visible {
+	outline: none;
+}
+
+.search-bar:focus {
+	background-color: var(--white);
+	box-shadow: 0px 0px 4px var(--white);
+	/* outline: 1px solid var(--white); */
+}
+
+.search-bar:hover {
+	background-color: var(--white);
+	box-shadow: 0px 0px 4px var(--white);
+	/* outline: 1px solid var(--white); */
+}
+
+.icon-search {
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	font-size: 2.4rem;
+	color: var(--black);
+}
+
+.icon-search:hover {
+	cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+	.search-bar {
+		max-width: 170px;
+	}
+}

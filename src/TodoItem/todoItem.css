@@ -1,0 +1,62 @@
+.item-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 270px;
+	height: 80px;
+	border-radius: 16px;
+	background-color: var(--secondary-color);   
+}
+
+.item-wrapper:first-child {
+	margin-top: 24px;
+}
+
+.item-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	height: 80%;
+	margin: 0;
+	font-size: 1.6rem;
+}
+
+.icon-completed, .icon-delete {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	font-size: 2.4rem;
+}
+.icon-completed:hover, .icon-delete:hover {
+	cursor: pointer;
+}
+
+.icon-completed {
+	top: -12px;
+	left: -6px;
+}
+
+.icon-delete {
+	top: -12px;
+	right: -6px;
+}
+
+.icon-delete:hover {
+	color: red;
+}
+
+.todo-icon-completed {
+	color: green;
+}
+
+.text-completed {
+	text-decoration: line-through;
+}
+
+@media screen and (max-width: 320px) {
+	.item-wrapper {
+		max-width: 190px;
+	}
+}
