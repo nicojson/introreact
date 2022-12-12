@@ -5,21 +5,21 @@ import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton';
-// import './index.css';
+import './index.css';
 
 function AppUI() {
+  const { 
+    error,
+    loading,
+    searchedTodos,
+    completeTodo,
+    deleteTodo,
+   } = React.useContext(TodoContext);
+
   return (
 		<main>
       <TodoCounter />
       <TodoSearch />
-      <TodoContext.Consumer>
-        {({
-          error,
-          loading,
-          searchedTodos,
-          completeTodo,
-          deleteTodo,
-        }) => (
         <TodoList>
           {loading && <p>Estamos cargando no desesperes...</p>}
           {!loading && error && <p>Hubo un error intentalo de nuevo</p>}
@@ -34,8 +34,6 @@ function AppUI() {
             />
           ))}
           </TodoList>
-          )}
-        </TodoContext.Consumer>
       <CreateTodoButton />
     </main>
 	)

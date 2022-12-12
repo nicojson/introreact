@@ -1,11 +1,13 @@
 import React from "react";
+import { TodoContext } from "../TodoContext";
 import './todoSearch.css';
 import { BiSearchAlt2 } from 'react-icons/bi';
 
-function TodoSearch({searchValue, setSearchValue}) {
+function TodoSearch() {
+
+  const { searchValue, setSearchValue } = React.useContext(TodoContext);
 
   const onInputSearch = (event) => {
-    console.log(event.target.value)
     setSearchValue(event.target.value)
   }
 
