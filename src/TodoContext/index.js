@@ -2,7 +2,9 @@ import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
 const TodoContext = React.createContext();
+
 function TodoProvider(props) {
+	const [openModal, setOpenModal] = React.useState(false);
   //usamos nuestro custom hoock
 	const {
 		item: todos, 
@@ -58,6 +60,8 @@ function TodoProvider(props) {
     	searchedTodos,
     	completeTodo,
     	deleteTodo,
+			openModal,
+			setOpenModal,
 		}}>
 			{props.children}
 		</TodoContext.Provider>
