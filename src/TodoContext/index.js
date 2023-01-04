@@ -33,7 +33,16 @@ function TodoProvider(props) {
 		}) 
 	}
 
-	//creamos una función para eliminar y completar todos
+	//creamos una función para eliminar, completar y agregar Todos
+	const addTodo = (text) => {
+		const newTodos = [...todos];
+		newTodos.push({
+			completed: false,
+			text,
+		});
+		saveTodos(newTodos)
+	};
+
 	const completeTodo = (text) => {
 		const todoIndex = todos.findIndex(todo => text === todo.text);
 		
@@ -51,13 +60,14 @@ function TodoProvider(props) {
 	}
 	return (
 		<TodoContext.Provider value={{
-		loading,
+			loading,
     	error,
     	todoCompleted,
     	totalTodos,
     	searchValue,
     	setSearchValue,
     	searchedTodos,
+    	addTodo,
     	completeTodo,
     	deleteTodo,
 			openModal,

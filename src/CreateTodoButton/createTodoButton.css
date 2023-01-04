@@ -4,7 +4,7 @@
 	position: absolute;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: end;
 	bottom: 0;
 	width: 87%;
 	height: 67px;
@@ -23,6 +23,7 @@
 
 .primary-button:hover {
 	cursor: pointer;
+	background-color: var(--button-color);
 }
 
 @media screen and (max-width: 280px) {
