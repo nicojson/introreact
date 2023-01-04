@@ -1,12 +1,5 @@
 import React from "react";
 
-// const defaultTodos = [
-//   {text: 'Cortar cebolla', completed: true},
-//   {text: 'Tomar el curso de intro a React', completed: false},
-//   {text: 'Llorar con la llorona', completed: false},
-//   {text: 'cocinar las calabazas', completed: false},
-// ]
-
 //creamos un custom hoock para persistir los datos en localStorage y manejar
 // el estado 
 function useLocalStorage(itemName, initialValue) {
